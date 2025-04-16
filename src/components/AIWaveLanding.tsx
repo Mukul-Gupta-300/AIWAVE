@@ -108,11 +108,11 @@ export default function AIWaveLanding() {
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
             {/* Left side heading */}
             <div className="md:w-2/5 mb-12 md:mb-0">
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-                Whatever your <br/>
-                stack, it runs <br/>
-                on <span className="text-purple-400">AIWave</span>.
-              </h2>
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+              Whatever your <br />
+              stack, <span className="text-purple-400">AIWave</span> connects you <br />
+              to the experts who build with it.
+            </h2>
               <p className="text-xl mt-6 text-gray-300">
               From TensorFlow to Transformers, our experts master every layer of the AI stack, delivering production-grade ML, NLP, and LLM solutions built to scale.
               </p>
