@@ -66,18 +66,19 @@ export default function AIWaveLanding() {
         <div className="absolute right-16 top-0 h-3/5 w-px bg-blue-500 animate-slideDown" style={{animationDelay: '0.4s'}}></div>
         
         {/* Main Header Content */}
-        <div className="container mx-auto px-6 z-10 mt-20">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">
-            Ride the <span className="text-orange-500">wave</span>
-            <br /> of <span className="text-blue-400">AI</span> talent
-          </h1>
-          
-          <div className="mt-10 space-y-4">
-            <p className="text-xl">Do you need an AI Expert? <a href="/hire" className="text-orange-500 hover:underline">Hire One</a></p>
-            <p className="text-xl">Are you an AI Expert? <a href="/apply" className="text-blue-400 hover:underline">Get Hired</a></p>
+        <div className="container mx-auto px-6 z-10 mt-20 flex justify-center">
+        <div className="text-left w-full md:w-3/4 lg:w-1/2 ml-17"> {/* Added ml-8 */}
+        <h1 className="text-6xl md:text-7xl font-bold mb-6">
+              Surf the <span className="text-orange-500">future</span>
+              <br /> with <span className="text-blue-400">Elite AI</span> talent
+            </h1>
+            
+            <div className="mt-10 space-y-2">
+              <p className="text-xl">Looking for an AI game-changer? <a href="/hire" className="text-orange-500 hover:underline">Hire Top Talent</a></p>
+              <p className="text-xl">Are you that expert? <a href="/apply" className="text-blue-400 hover:underline">Join the Network</a></p>
+            </div>
           </div>
-        </div>
-        
+        </div>   
         {/* Bottom Horizontal Lines (3 lines with varying widths) */}
         <div className="absolute bottom-16 w-full">
           <div className="w-full h-px bg-blue-500 animate-slideRight" style={{animationDelay: '0.3s'}}></div>
@@ -101,7 +102,7 @@ export default function AIWaveLanding() {
       {/* NEW SECTION: Tech Stack Showcase with Bi-directional Infinite Scroll */}
       <section
         ref={techStackRef}
-        className="min-h-screen flex flex-col justify-center relative py-16 bg-gradient-to-br from-black to-purple-900 overflow-hidden"
+        className="min-h-screen flex flex-col justify-center relative py-16 bg-gradient-to-br from-black to-purple-900 overflow-hidden ml-4"
       >
         <div className="container mx-auto px-6 z-10">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
@@ -113,7 +114,7 @@ export default function AIWaveLanding() {
                 on <span className="text-purple-400">AIWave</span>.
               </h2>
               <p className="text-xl mt-6 text-gray-300">
-                Our AI specialists cover all modern technologies and frameworks in the machine learning ecosystem.
+              From TensorFlow to Transformers, our experts master every layer of the AI stack, delivering production-grade ML, NLP, and LLM solutions built to scale.
               </p>
             </div>
           </div>
@@ -295,31 +296,33 @@ export default function AIWaveLanding() {
       {/* Features Section - Dynamic Grid Layout as shown in Image 2 */}
       <section 
         ref={sectionOneRef}
-        className="min-h-screen flex flex-col justify-center relative py-16"
+        className="min-h-screen flex flex-col justify-center relative py-16 ml-4"
       >
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-            <span className="text-blue-400">AI</span> talent marketplace
+            A Curated Marketplace for the Best in <span className="text-blue-400">AI</span> 
+
+
           </h2>
           
           {/* Dynamic Grid Layout Like Image 2 */}
           <div className="grid grid-cols-6 gap-4 max-w-6xl mx-auto">
             {/* Top row */}
-            <div className={`col-span-3 border border-blue-500 p-12 transition-all duration-1000 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-              <p className="text-2xl">In this rising sea of AI, we help you find the best talent.</p>
+            <div className={`col-span-3 border border-blue-500 p-12 transition-all duration-1000 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'} text-left`}>
+              <p className="text-2xl">In the ever-expanding ocean of AI innovation, we connect you with top-tier, vetted talent. The kind that drives real-world impact, not just demos.</p>
             </div>
             
-            <div className={`col-span-3 border border-blue-500 p-12 transition-all duration-1000 delay-200 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-              <p className="text-2xl">Integrate AI to systems seamlessly with experts ready to cater your needs</p>
+            <div className={`col-span-3 border border-blue-500 p-12 transition-all duration-1000 delay-200 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'} text-left`}>
+              <p className="text-2xl">Seamlessly embed AI into your systems with seasoned professionals who understand both the tech and your business goals, no guesswork, just execution.</p>
             </div>
             
             {/* Bottom row - varying sizes */}
-            <div className={`col-span-4 border border-blue-500 p-12 transition-all duration-1000 delay-400 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-              <p className="text-2xl">Find AI experts those are well tested and have industry level experience</p>
+            <div className={`col-span-4 border border-blue-500 p-12 transition-all duration-1000 delay-400 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'} text-left`}>
+              <p className="text-2xl">Work with AI specialists who’ve been rigorously screened and bring deep, hands-on experience from industry-leading deployments.</p>
             </div>
             
-            <div className={`col-span-2 border border-blue-500 p-12 transition-all duration-1000 delay-600 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-              <p className="text-2xl">Grow and expand in the domain of AI at lower costs</p>
+            <div className={`col-span-2 border border-blue-500 p-12 transition-all duration-1000 delay-600 ${isInView(sectionOneRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'} text-left`}>
+              <p className="text-2xl">Scale your AI ambitions efficiently, tap into elite expertise without the overhead of traditional hiring.</p>
             </div>
           </div>
         </div>
@@ -336,7 +339,7 @@ export default function AIWaveLanding() {
       {/* Steps Section */}
       <section 
         ref={sectionTwoRef}
-        className="min-h-screen flex flex-col justify-center relative pb-20"
+        className="min-h-screen flex flex-col justify-center relative pb-20 ml-4"
       >
         <div className="container mx-auto px-6">
           <h2 className={`text-3xl md:text-4xl font-bold mb-16 transition-all duration-1000 ${isInView(sectionTwoRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
@@ -349,7 +352,7 @@ export default function AIWaveLanding() {
             <div className="grid grid-cols-3 gap-0">
               {/* Cell 0,0 (Top-Left) - CONTENT BOX - MAKE BOLDER */}
               <div className={`border-2 border-blue-500 bg-blue-900 bg-opacity-30 shadow-lg shadow-blue-500/30 aspect-square flex items-center justify-center transition-all duration-1000 ${isInView(sectionTwoRef) ? 'opacity-100 transform-none' : 'opacity-0 -translate-x-10'}`}>
-                <p className="text-lg text-center font-semibold px-4">Explain your requirement to our Agent</p>
+                <p className="text-lg text-left font-semibold px-4">Share your project goals with our AI talent advisor, we’ll help you define the right scope and skills needed.</p>
               </div>
               
               {/* Cell 0,1 (Top-Middle) - EMPTY */}
@@ -368,7 +371,7 @@ export default function AIWaveLanding() {
               
               {/* Cell 1,1 (Middle-Middle) - CONTENT BOX - MAKE BOLDER */}
               <div className={`border-2 border-blue-500 bg-blue-900 bg-opacity-30 shadow-lg shadow-blue-500/30 aspect-square flex items-center justify-center transition-all duration-1000 delay-300 ${isInView(sectionTwoRef) ? 'opacity-100 transform-none' : 'opacity-0 -translate-y-10'}`}>
-                <p className="text-lg text-center font-semibold px-4">Get a filtered list of domain freelancers</p>
+                <p className="text-lg text-left font-semibold px-4">Receive a tailored shortlist of highly skilled freelancers, handpicked to match your domain, stack, and vision.</p>
               </div>
               
               {/* Cell 1,2 (Middle-Right) - EMPTY */}
@@ -387,7 +390,7 @@ export default function AIWaveLanding() {
               
               {/* Cell 2,2 (Bottom-Right) - CONTENT BOX - MAKE BOLDER */}
               <div className={`border-2 border-blue-500 bg-blue-900 bg-opacity-30 shadow-lg shadow-blue-500/30 aspect-square flex items-center justify-center transition-all duration-1000 delay-600 ${isInView(sectionTwoRef) ? 'opacity-100 transform-none' : 'opacity-0 translate-x-10'}`}>
-                <p className="text-lg text-center font-semibold px-4">Choose a plan and hire</p>
+                <p className="text-lg text-left font-semibold px-4">Pick a plan that fits your timeline and budget, then get started with the expert of your choice, no delays, no hassle.</p>
               </div>
             </div>
           </div>
