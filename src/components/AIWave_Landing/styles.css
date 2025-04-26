@@ -1,0 +1,191 @@
+/* Base Animations */
+@keyframes slideRight {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideDown {
+  from { transform: scaleY(0); transform-origin: top; }
+  to { transform: scaleY(1); transform-origin: top; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Tech stack scroll animations */
+@keyframes scrollRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Animation Classes */
+.animate-slideRight {
+  animation: slideRight 1.5s ease-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 1.8s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Custom Tailwind class for right-22 spacing */
+.right-22 {
+  right: 5.5rem;
+}
+
+/* Tech Stack Scroll Container */
+.tech-scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tech-scroll-track {
+  display: flex;
+  width: fit-content;
+}
+
+.tech-scroll-right {
+  animation: scrollRight 30s linear infinite;
+}
+
+.tech-scroll-left {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.tech-logo-item {
+  flex-shrink: 0;
+}
+
+/* Animated background grid */
+.tech-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+/* Pause animations on hover */
+.tech-scroll-container:hover .tech-scroll-track {
+  animation-play-state: paused;
+}
+
+/* Theme Variables for Light/Dark mode */
+:root {
+  /* Dark mode colors (default) */
+  --background-primary: #000000;
+  --background-secondary: #1e1e3f;
+  --accent-primary: #3b82f6; /* blue-500 */
+  --accent-secondary: #8b5cf6; /* purple-500 */
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db; /* gray-300 */
+  --border-color: #3b82f6; /* blue-500 */
+  --box-bg: rgba(30, 64, 175, 0.3); /* blue-900 with 30% opacity */
+  --box-shadow: rgba(59, 130, 246, 0.3); /* blue-500 with 30% opacity */
+  --grid-line-color: rgba(139, 92, 246, 0.1); /* purple with 10% opacity */
+}
+
+/* Light mode colors */
+[data-theme="light"] {
+  --background-primary: #ffffff;
+  --background-secondary: #f3f4f6; /* gray-100 */
+  --accent-primary: #60a5fa; /* blue-400 */
+  --accent-secondary: #a78bfa; /* purple-400 */
+  --text-primary: #111827; /* gray-900 */
+  --text-secondary: #4b5563; /* gray-600 */
+  --border-color: #60a5fa; /* blue-400 */
+  --box-bg: rgba(219, 234, 254, 0.7); /* blue-100 with 70% opacity */
+  --box-shadow: rgba(96, 165, 250, 0.3); /* blue-400 with 30% opacity */
+  --grid-line-color: rgba(167, 139, 250, 0.2); /* purple-400 with 20% opacity */
+}
+
+/* Theme-sensitive classes */
+.theme-bg-primary {
+  background-color: var(--background-primary);
+}
+
+.theme-bg-secondary {
+  background-color: var(--background-secondary);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-accent-primary {
+  color: var(--accent-primary);
+}
+
+.theme-accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-box {
+  background-color: var(--box-bg);
+  border-color: var(--border-color);
+  box-shadow: 0 10px 15px -3px var(--box-shadow);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Adjust tech grid for theme */
+[data-theme="light"] .tech-grid-bg {
+  background-image: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+}
+
+/* Theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
